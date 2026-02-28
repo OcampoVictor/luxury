@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-copper: #c48b71;
+  --color-copper-dark: #8a5a45;
+  --color-copper-light: #e0b09b;
+  --color-bg-dark: #111111;
+  --color-bg-darker: #0a0a0a;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-outfit: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-copper);
+  background-image: radial-gradient(circle at 50% 0%, #222 0%, transparent 70%),
+                    radial-gradient(circle at 50% 100%, #1a1a1a 0%, transparent 70%);
+  background-attachment: fixed;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-copper-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-copper);
+}
+
+.title-shimmer {
+  background: linear-gradient(
+    120deg,
+    var(--color-copper) 40%,
+    var(--color-copper-light) 50%,
+    var(--color-copper) 60%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.button-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: button-shimmer-anim 3s infinite;
+}
+
+@keyframes button-shimmer-anim {
+  0% { left: -100%; }
+  20% { left: 200%; }
+  100% { left: 200%; }
+}

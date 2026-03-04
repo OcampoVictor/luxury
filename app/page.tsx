@@ -14,7 +14,7 @@ import { Navigation } from '@/components/Navigation';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-bg-dark text-copper font-sans selection:bg-copper selection:text-bg-dark">
+    <main className="min-h-screen bg-bg-dark text-copper font-sans selection:bg-copper selection:text-bg-dark overflow-x-hidden">
       <Navigation />
       <Hero />
       <Countdown />

@@ -82,15 +82,10 @@ export function Navigation() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed bottom-4 left-4 right-4 z-50 flex justify-center"
+          className="fixed bottom-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none"
         >
-          <div className="w-full max-w-4xl bg-gradient-to-r from-copper-dark to-copper text-bg-dark rounded-full shadow-lg shadow-black/50 flex items-center justify-between px-4 py-2 relative">
+          <div className="w-auto max-w-4xl bg-gradient-to-r from-copper-dark to-copper text-bg-dark rounded-full shadow-lg shadow-black/50 flex items-center justify-center gap-8 md:gap-6 px-6 py-2 relative pointer-events-auto">
             
-            {/* Shimmer Background */}
-            <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
-              <div className="w-full h-full button-shimmer"></div>
-            </div>
-
             {/* Music Toggle */}
             <button 
               onClick={toggleMusic}
@@ -130,7 +125,7 @@ export function Navigation() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 20, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute bottom-[calc(100%+1rem)] right-0 bg-gradient-to-b from-copper-dark to-copper rounded-2xl p-4 shadow-xl flex flex-col gap-4 min-w-[200px] z-10 border border-copper-light/20"
+                  className="absolute bottom-[calc(100%+1rem)] right-0 md:right-auto bg-gradient-to-b from-copper-dark to-copper rounded-2xl p-4 shadow-xl flex flex-col gap-4 min-w-[200px] z-10 border border-copper-light/20"
                 >
                   {sections.map((section) => (
                     <button

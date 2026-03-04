@@ -6,7 +6,7 @@ import { Church, Wine } from 'lucide-react';
 
 export function Location() {
   return (
-    <section className="py-24 px-4 border-t border-copper/20 relative">
+    <section id="ubicacion" className="py-24 px-4 border-t border-copper/20 relative">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-24">
         
         {/* Ceremonia */}
@@ -23,6 +23,7 @@ export function Location() {
                 src="https://picsum.photos/800/600?grayscale&random=10" 
                 alt="La Ceremonia" 
                 fill 
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
@@ -81,6 +82,7 @@ export function Location() {
                 src="https://picsum.photos/800/600?grayscale&random=11" 
                 alt="La Recepción" 
                 fill 
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />

@@ -12,7 +12,7 @@ const timeline = [
 
 export function Schedule() {
   return (
-    <section className="py-24 px-4 border-t border-copper/20 relative">
+    <section id="itinerario" className="py-24 px-4 border-t border-copper/20 relative">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         
         <motion.div 

@@ -2,20 +2,13 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Shirt } from 'lucide-react';
-
-const DressIcon = ({ className, strokeWidth = 1 }: { className?: string, strokeWidth?: number }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M9.5 2h5l3 6-2.5 2v12h-6V10L6.5 8l3-6Z"/>
-    <path d="M9.5 6h5"/>
-  </svg>
-);
+import Image from 'next/image';
 
 export function DressCode() {
   const [activeTab, setActiveTab] = useState<'mujeres' | 'hombres'>('mujeres');
 
   return (
-    <section className="py-24 px-4 border-t border-copper/20 relative">
+    <section id="vestimenta" className="py-24 px-4 border-t border-copper/20 relative">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         
         <motion.div 
@@ -72,7 +65,7 @@ export function DressCode() {
           </div>
 
           {/* Content */}
-          <div className="w-full relative min-h-[250px] flex justify-center">
+          <div className="w-full relative min-h-[550px] md:min-h-[350px] flex justify-center">
             <AnimatePresence mode="wait">
               {activeTab === 'mujeres' ? (
                 <motion.div
@@ -81,23 +74,36 @@ export function DressCode() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.4 }}
-                  className="flex flex-col items-center text-center max-w-md absolute"
+                  className="flex flex-col md:flex-row items-center gap-8 max-w-2xl absolute w-full"
                 >
-                  <DressIcon className="w-12 h-12 text-copper mb-6" strokeWidth={1} />
-                  <h3 className="font-outfit text-2xl tracking-widest mb-4">VESTIDO LARGO</h3>
-                  <p className="font-mono text-sm text-copper-light leading-relaxed mb-8">
-                    Sugerimos vestidos largos o midi elegantes. Por favor, reserva el color blanco y tonos similares exclusivamente para la novia.
-                  </p>
-                  
-                  <div className="flex flex-col items-center gap-3">
-                    <p className="font-mono text-[10px] tracking-widest uppercase text-copper/60">
-                      Colores sugeridos
+                  <div className="relative w-48 h-72 border border-copper p-2 shrink-0">
+                    <div className="relative w-full h-full overflow-hidden">
+                      <Image 
+                        src="https://picsum.photos/400/600?grayscale&random=30" 
+                        alt="Ejemplo Vestido" 
+                        fill 
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover" 
+                        referrerPolicy="no-referrer" 
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                    <h3 className="font-outfit text-2xl tracking-widest mb-4">VESTIDO LARGO</h3>
+                    <p className="font-mono text-sm text-copper-light leading-relaxed mb-8">
+                      Sugerimos vestidos largos o midi elegantes. Por favor, reserva el color blanco y tonos similares exclusivamente para la novia.
                     </p>
-                    <div className="flex gap-4">
-                      <div className="w-8 h-8 rounded-full bg-[#1a2b3c] border border-copper/30" title="Azul Marino" />
-                      <div className="w-8 h-8 rounded-full bg-[#3d2b1f] border border-copper/30" title="Café Oscuro" />
-                      <div className="w-8 h-8 rounded-full bg-[#2c3e2d] border border-copper/30" title="Verde Bosque" />
-                      <div className="w-8 h-8 rounded-full bg-[#4a1c1c] border border-copper/30" title="Vino" />
+                    
+                    <div className="flex flex-col items-center md:items-start gap-3">
+                      <p className="font-mono text-[10px] tracking-widest uppercase text-copper/60">
+                        Colores sugeridos
+                      </p>
+                      <div className="flex gap-4">
+                        <div className="w-8 h-8 rounded-full bg-[#1a2b3c] border border-copper/30" title="Azul Marino" />
+                        <div className="w-8 h-8 rounded-full bg-[#3d2b1f] border border-copper/30" title="Café Oscuro" />
+                        <div className="w-8 h-8 rounded-full bg-[#2c3e2d] border border-copper/30" title="Verde Bosque" />
+                        <div className="w-8 h-8 rounded-full bg-[#4a1c1c] border border-copper/30" title="Vino" />
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -108,22 +114,35 @@ export function DressCode() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.4 }}
-                  className="flex flex-col items-center text-center max-w-md absolute"
+                  className="flex flex-col md:flex-row items-center gap-8 max-w-2xl absolute w-full"
                 >
-                  <Shirt className="w-12 h-12 text-copper mb-6" strokeWidth={1} />
-                  <h3 className="font-outfit text-2xl tracking-widest mb-4">TRAJE OSCURO</h3>
-                  <p className="font-mono text-sm text-copper-light leading-relaxed mb-8">
-                    Sugerimos traje formal en tonos oscuros con corbata o moño. Zapatos de vestir obligatorios.
-                  </p>
-                  
-                  <div className="flex flex-col items-center gap-3">
-                    <p className="font-mono text-[10px] tracking-widest uppercase text-copper/60">
-                      Colores sugeridos
+                  <div className="relative w-48 h-72 border border-copper p-2 shrink-0">
+                    <div className="relative w-full h-full overflow-hidden">
+                      <Image 
+                        src="https://picsum.photos/400/600?grayscale&random=31" 
+                        alt="Ejemplo Traje" 
+                        fill 
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover" 
+                        referrerPolicy="no-referrer" 
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                    <h3 className="font-outfit text-2xl tracking-widest mb-4">TRAJE OSCURO</h3>
+                    <p className="font-mono text-sm text-copper-light leading-relaxed mb-8">
+                      Sugerimos traje formal en tonos oscuros con corbata o moño. Zapatos de vestir obligatorios.
                     </p>
-                    <div className="flex gap-4">
-                      <div className="w-8 h-8 rounded-full bg-[#111111] border border-copper/30" title="Negro" />
-                      <div className="w-8 h-8 rounded-full bg-[#1a2b3c] border border-copper/30" title="Azul Marino" />
-                      <div className="w-8 h-8 rounded-full bg-[#2a2a2a] border border-copper/30" title="Gris Oscuro" />
+                    
+                    <div className="flex flex-col items-center md:items-start gap-3">
+                      <p className="font-mono text-[10px] tracking-widest uppercase text-copper/60">
+                        Colores sugeridos
+                      </p>
+                      <div className="flex gap-4">
+                        <div className="w-8 h-8 rounded-full bg-[#111111] border border-copper/30" title="Negro" />
+                        <div className="w-8 h-8 rounded-full bg-[#1a2b3c] border border-copper/30" title="Azul Marino" />
+                        <div className="w-8 h-8 rounded-full bg-[#2a2a2a] border border-copper/30" title="Gris Oscuro" />
+                      </div>
                     </div>
                   </div>
                 </motion.div>

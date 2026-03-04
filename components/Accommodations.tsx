@@ -29,7 +29,7 @@ const accommodations = [
 
 export function Accommodations() {
   return (
-    <section className="py-24 px-4 border-t border-copper/20 relative">
+    <section id="hospedaje" className="py-24 px-4 border-t border-copper/20 relative">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         
         <motion.div 
@@ -67,6 +67,7 @@ export function Accommodations() {
                     src={hotel.image} 
                     alt={hotel.name} 
                     fill 
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover hover:scale-105 transition-transform duration-700" 
                     referrerPolicy="no-referrer" 
                   />

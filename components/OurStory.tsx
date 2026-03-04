@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function OurStory() {
   return (
-    <section className="py-24 px-4 border-t border-copper/20 relative">
+    <section id="historia" className="py-24 px-4 border-t border-copper/20 relative">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center">
         
         <motion.div 
@@ -13,7 +13,7 @@ export function OurStory() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex-1"
+          className="flex-1 w-full"
         >
           <div className="flex items-center gap-4 mb-8">
             <div className="h-[1px] w-8 bg-copper" />
@@ -28,19 +28,13 @@ export function OurStory() {
 
           <div className="space-y-6 text-sm md:text-base text-copper-light/80 font-mono leading-relaxed max-w-lg">
             <p>
-              Todo comenzó con una taza de café en una tarde lluviosa de otoño. Lo que parecía ser un encuentro casual pronto se convirtió en horas de conversación sobre sueños, miedos y pasiones compartidas.
+              Nos conocimos en un concierto de nuestra banda favorita, rodeados de música y luces. Un cruce de miradas entre la multitud fue suficiente para saber que algo especial estaba a punto de comenzar.
             </p>
             <p>
-              Desde ese día, nuestras vidas se entrelazaron de la manera más hermosa. Hemos recorrido ciudades juntas, superado desafíos y celebrado cada pequeño triunfo como un equipo.
+              Lo que empezó como una amistad llena de risas y aventuras espontáneas, poco a poco se transformó en un amor profundo y sincero. Juntos hemos aprendido a disfrutar de las cosas simples, desde cocinar los domingos hasta perdernos en viajes sin rumbo fijo.
             </p>
             <p>
-              Hoy, después de tres años de construir memorias inolvidables, estamos listos para dar el siguiente gran paso y prometernos amor eterno frente a las personas que más queremos.
-            </p>
-          </div>
-
-          <div className="mt-12">
-            <p className="font-outfit text-xl tracking-widest uppercase">
-              ANA + SANTIAGO
+              Cinco años después de aquel primer encuentro, hemos decidido escribir el capítulo más importante de nuestras vidas. Nos emociona infinitamente compartir este momento mágico con todos ustedes.
             </p>
           </div>
         </motion.div>
@@ -50,7 +44,7 @@ export function OurStory() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex-1 relative"
+          className="flex-1 relative w-full mt-12 md:mt-0"
         >
           <div className="relative w-full aspect-[3/4] max-w-md mx-auto border border-copper p-3">
             <div className="relative w-full h-full overflow-hidden">
@@ -58,6 +52,7 @@ export function OurStory() {
                 src="https://i.postimg.cc/Xv6kq5yT/nuestra-historia-tema-industrial.jpg"
                 alt="Nuestras manos"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
                 referrerPolicy="no-referrer"
               />

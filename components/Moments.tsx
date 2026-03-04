@@ -4,12 +4,12 @@ import { motion } from 'motion/react';
 import Image from 'next/image';
 
 const photos = [
-  { src: 'https://picsum.photos/800/600?grayscale&random=1', alt: 'Momento 1', aspect: 'aspect-square' },
-  { src: 'https://picsum.photos/600/800?grayscale&random=2', alt: 'Momento 2', aspect: 'aspect-[3/4]' },
-  { src: 'https://picsum.photos/800/800?grayscale&random=3', alt: 'Momento 3', aspect: 'aspect-square' },
-  { src: 'https://picsum.photos/800/500?grayscale&random=4', alt: 'Momento 4', aspect: 'aspect-[4/3]' },
-  { src: 'https://picsum.photos/500/800?grayscale&random=5', alt: 'Momento 5', aspect: 'aspect-[3/4]' },
-  { src: 'https://picsum.photos/800/600?grayscale&random=6', alt: 'Momento 6', aspect: 'aspect-square' },
+  { src: 'https://i.postimg.cc/d3Q2VkfG/tema_luxury_ana_santiago_cuadrado.jpg', alt: 'Momento 1', aspect: 'aspect-square' },
+  { src: 'https://i.postimg.cc/ZnY85BQP/tema_luxury_ana_santiago_vertical.jpg', alt: 'Momento 4', aspect: 'aspect-[3/4]' },
+  { src: 'https://i.postimg.cc/J07NzDFJ/tema_luxury_ana_santiago_cuadrado_2.jpg', alt: 'Momento 2', aspect: 'aspect-square' },
+  { src: 'https://i.postimg.cc/nrV4hjW4/tema_luxury_ana_santiago_vertical_2.jpg', alt: 'Momento 5', aspect: 'aspect-[3/4]' },
+  { src: 'https://i.postimg.cc/WzpG1FyZ/tema_luxury_ana_santiago_cuadrado_3.jpg', alt: 'Momento 3', aspect: 'aspect-square' },
+  { src: 'https://i.postimg.cc/WzpG1Fyk/tema_luxury_ana_santiago_vertical_3.jpg', alt: 'Momento 6', aspect: 'aspect-[3/4]' },
 ];
 
 export function Moments() {
@@ -50,6 +50,7 @@ export function Moments() {
                 src={photo.src}
                 alt={photo.alt}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110 group-hover:opacity-80"
                 referrerPolicy="no-referrer"
               />

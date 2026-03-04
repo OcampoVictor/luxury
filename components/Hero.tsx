@@ -14,7 +14,7 @@ export function Hero() {
         <div className="absolute bottom-20 right-20 w-96 h-96 border-[1px] border-copper rounded-full" />
         
         {/* Grid lines */}
-        <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to right, #c48b71 1px, transparent 1px), linear-gradient(to bottom, #c48b71 1px, transparent 1px)', backgroundSize: '100px 100px', opacity: 0.2 }} />
+        <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to right, #d4d4d8 1px, transparent 1px), linear-gradient(to bottom, #d4d4d8 1px, transparent 1px)', backgroundSize: '100px 100px', opacity: 0.2 }} />
       </div>
 
       <motion.div
@@ -47,6 +47,7 @@ export function Hero() {
               src="https://i.postimg.cc/g0qZrZGK/industrial-hero-tema.jpg"
               alt="Ana y Santiago"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
               referrerPolicy="no-referrer"
             />

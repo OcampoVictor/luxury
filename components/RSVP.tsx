@@ -57,6 +57,7 @@ export function RSVP() {
               <input 
                 type="text" 
                 required
+                data-lpignore="true"
                 placeholder="Tu nombre y apellido"
                 className="bg-transparent border-b border-copper/50 p-2 text-sm font-sans focus:outline-none focus:border-copper transition-colors placeholder:text-copper/30"
                 value={formData.name}
@@ -85,17 +86,14 @@ export function RSVP() {
             <label className="font-mono text-[10px] tracking-widest uppercase text-copper-light">
               Restricciones Alimenticias
             </label>
-            <select 
-              className="bg-transparent border-b border-copper/50 p-2 text-sm font-sans focus:outline-none focus:border-copper transition-colors text-copper"
+            <input 
+              type="text" 
+              data-lpignore="true"
+              placeholder="Ej. Soy alérgico a los mariscos, intolerante a la lactosa, etc."
+              className="bg-transparent border-b border-copper/50 p-2 text-sm font-sans focus:outline-none focus:border-copper transition-colors placeholder:text-copper/30"
               value={formData.restrictions}
               onChange={e => setFormData({...formData, restrictions: e.target.value})}
-            >
-              <option value="" className="bg-bg-dark">Seleccione una opción</option>
-              <option value="ninguna" className="bg-bg-dark">Ninguna</option>
-              <option value="vegetariano" className="bg-bg-dark">Vegetariano</option>
-              <option value="vegano" className="bg-bg-dark">Vegano</option>
-              <option value="alergias" className="bg-bg-dark">Alergias (especificar al enviar)</option>
-            </select>
+            />
           </div>
 
           <div className="flex flex-col gap-2 mb-12">
@@ -104,6 +102,7 @@ export function RSVP() {
             </label>
             <input 
               type="text" 
+              data-lpignore="true"
               placeholder="Título - Artista"
               className="bg-transparent border-b border-copper/50 p-2 text-sm font-sans focus:outline-none focus:border-copper transition-colors placeholder:text-copper/30"
               value={formData.song}

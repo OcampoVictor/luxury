@@ -79,7 +79,7 @@ export function DressCode() {
                   <div className="relative w-48 h-72 border border-copper p-2 shrink-0">
                     <div className="relative w-full h-full overflow-hidden">
                       <Image 
-                        src="https://picsum.photos/400/600?grayscale&random=30" 
+                        src="https://i.postimg.cc/W1nCSCR9/tema-luxury-codigo-vestimenta-mujer.jpg" 
                         alt="Ejemplo Vestido" 
                         fill 
                         sizes="(max-width: 768px) 100vw, 33vw"
@@ -119,7 +119,7 @@ export function DressCode() {
                   <div className="relative w-48 h-72 border border-copper p-2 shrink-0">
                     <div className="relative w-full h-full overflow-hidden">
                       <Image 
-                        src="https://picsum.photos/400/600?grayscale&random=31" 
+                        src="https://i.postimg.cc/15DLV4Jb/tema-luxury-codigo-vestimenta-hombre.jpg" 
                         alt="Ejemplo Traje" 
                         fill 
                         sizes="(max-width: 768px) 100vw, 33vw"

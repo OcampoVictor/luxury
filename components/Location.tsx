@@ -20,7 +20,7 @@ export function Location() {
           >
             <div className="relative w-full h-full overflow-hidden">
               <Image 
-                src="https://picsum.photos/800/600?grayscale&random=10" 
+                src="https://i.postimg.cc/mrpqW9gm/tema_luxury_parroquia.jpg" 
                 alt="La Ceremonia" 
                 fill 
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -79,7 +79,7 @@ export function Location() {
           >
             <div className="relative w-full h-full overflow-hidden">
               <Image 
-                src="https://picsum.photos/800/600?grayscale&random=11" 
+                src="https://i.postimg.cc/FKCqXSHP/tema_luxury_hacienda.jpg" 
                 alt="La Recepción" 
                 fill 
                 sizes="(max-width: 768px) 100vw, 50vw"

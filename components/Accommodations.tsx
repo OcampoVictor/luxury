@@ -8,21 +8,21 @@ const accommodations = [
     name: 'Hotel Boutique Los Laureles',
     distance: 'A 5 min del evento',
     description: 'Opción de lujo con tarifa preferencial usando el código BODA26.',
-    image: 'https://picsum.photos/600/400?grayscale&random=20',
+    image: 'https://i.postimg.cc/Dys8WdV8/tema-luxury-hotel-laureles.jpg',
     link: 'https://maps.google.com/?q=Hotel+Boutique+Los+Laureles'
   },
   {
     name: 'Grand Hotel Centro',
     distance: 'A 15 min del evento',
     description: 'Excelente ubicación en el centro histórico, ideal para turistear.',
-    image: 'https://picsum.photos/600/400?grayscale&random=21',
+    image: 'https://i.postimg.cc/kML2XYpH/tema-luxury-hotel-centro.jpg',
     link: 'https://maps.google.com/?q=Grand+Hotel+Centro'
   },
   {
     name: 'Suites La Fábrica',
     distance: 'A 2 min del evento',
     description: 'Comodidad y cercanía ideal para el fin de semana.',
-    image: 'https://picsum.photos/600/400?grayscale&random=22',
+    image: 'https://i.postimg.cc/Z0kztdVt/tema-luxury-suites.jpg',
     link: 'https://maps.google.com/?q=Suites+La+Fabrica'
   }
 ];

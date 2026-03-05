@@ -21,11 +21,11 @@ export function Navigation() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Initialize audio
-    audioRef.current = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'); // Placeholder romantic song
-    audioRef.current.loop = true;
-
-    // Try to play immediately (might be blocked by browser)
+    // Only init audio once
+    if (!audioRef.current) {
+      audioRef.current = new Audio('/christina-perri-a-thousand-years.mp3');
+      audioRef.current.loop = true;
+    }  // Try to play immediately (might be blocked by browser)
     const playPromise = audioRef.current.play();
     if (playPromise !== undefined) {
       playPromise.then(() => {
@@ -85,9 +85,9 @@ export function Navigation() {
           className="fixed bottom-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none"
         >
           <div className="w-auto max-w-4xl bg-gradient-to-r from-copper-dark to-copper text-bg-dark rounded-full shadow-lg shadow-black/50 flex items-center justify-center gap-8 md:gap-6 px-6 py-2 relative pointer-events-auto">
-            
+
             {/* Music Toggle */}
-            <button 
+            <button
               onClick={toggleMusic}
               className="w-10 h-10 rounded-full border border-bg-dark/30 flex items-center justify-center hover:bg-bg-dark/10 transition-colors z-10"
               aria-label={isPlaying ? "Pausar música" : "Reproducir música"}
@@ -109,7 +109,7 @@ export function Navigation() {
             </div>
 
             {/* Mobile Menu Toggle */}
-            <button 
+            <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-bg-dark/10 transition-colors z-10"
               aria-label="Menú"
